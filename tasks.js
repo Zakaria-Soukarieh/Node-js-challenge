@@ -41,6 +41,9 @@ function onDataReceived(text) {
   else if(text === 'hello\n'){
     hello();
   }
+  else if(text === 'list\n'){
+    list();
+  }
     else if(text.startsWith('hello')){
     let name = text.slice(6).trim();
     hello(name);
@@ -94,4 +97,14 @@ function help(){
   console.log("- quit or exit : to quit the application")
   console.log("- hello <name> : to say hello to the given name")
   console.log("- help : to show this message")
-}
+};
+
+const tasks =  [
+  "do the tasks",
+  "wash the dishes",
+  "cut the rope"
+];
+
+function list (){
+  console.log(tasks)
+};
