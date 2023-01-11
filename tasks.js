@@ -84,6 +84,7 @@ function quit(){
 // The following line starts the application
 startApp("Zakaria Sukarieh")
 
+// if user typed help, it will show possible commands to use that will help him/her
 function help(){
   console.log("Possible commands: ")
   console.log("- quit or exit : to quit the application")
