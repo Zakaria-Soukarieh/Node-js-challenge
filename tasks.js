@@ -44,6 +44,16 @@ function onDataReceived(text) {
   else if(text === 'list\n'){
     list();
   }
+  else if(text === 'add\n'){
+  console.log("Error: Please provide a task name to add.");
+  }
+  else if(text.startsWith('add ')){
+    let TX =text.slice(4).trim();
+    add(TX);
+
+    }
+
+
     else if(text.startsWith('hello')){
     let name = text.slice(6).trim();
     hello(name);
@@ -108,3 +118,8 @@ const tasks =  [
 function list (){
   console.log(tasks)
 };
+
+function add(TX){
+  tasks.push(TX);
+  console.log(`Task "${TX}" added!`);
+}
