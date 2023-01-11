@@ -40,6 +40,10 @@ function onDataReceived(text) {
   else if(text === 'hello\n'){
     hello();
   }
+    else if(text.startsWith('hello')){
+    let name = text.slice(6).trim();
+    hello(name);
+  }
   else if(text === 'help\n'){
     help();
   }
@@ -66,8 +70,8 @@ function unknownCommand(c){
  *
  * @returns {void}
  */
-function hello(){
-  console.log('hello!')
+function hello(name=''){
+  console.log('hello ' + name + '!');
 }
 
 
