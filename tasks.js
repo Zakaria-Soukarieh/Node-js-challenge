@@ -33,6 +33,7 @@ function startApp(name){
  * @param  {string} text data typed by the user
  * @returns {void}
  */
+//
 function onDataReceived(text) {
   if (text === 'quit\n' || text === 'exit\n') {
     quit();
@@ -51,7 +52,6 @@ function onDataReceived(text) {
     unknownCommand(text);
   }
 }
-
 
 /**
  * prints "unknown command"
@@ -92,6 +92,6 @@ startApp("Zakaria Sukarieh")
 function help(){
   console.log("Possible commands: ")
   console.log("- quit or exit : to quit the application")
-  console.log("- hello : to say hello")
+  console.log("- hello <name> : to say hello to the given name")
   console.log("- help : to show this message")
 }
